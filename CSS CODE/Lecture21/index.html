@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query Using</title>
+    <style>
+      .box {
+        background-color: blueviolet;
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+      }
+      /* 1 using @media and min-width: 500px isme ham 500 se niche karenge to box color blueviolet ho jayega
+         2 uske baad 500px se uper le jayenge to box color red ho jayega */
+
+      /* @media (min-width: 500px) {
+        .box {
+          background-color: red;
+        }
+      } */
+
+      /* max-width: 500px 0 to 500px se box color red rahega aur 
+      uske baad 500px se jayeda uper le jayega to box color blueviolet ho jayega */
+
+      /* @media (max-width: 500px) {
+        .box {
+          background-color: red;
+        }
+      } */
+
+      /* min-width: 30em ka matlab hota 480 px ye by font text 16px hota to isko ham 30*16=480px ho jayega
+      aur 480 ke uper le jaenge to box color red ho jayega aur 480 to 800 ke bich box color red rahega 
+      aur 800 ke uper jaise hi le jayenge to box color blueviolet ho jayega*/
+
+      /* @media (min-width: 30em) and (max-width: 50em) {
+        .box {
+          background-color: red;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box">Hello Ji</div>
+  </body>
+</html>
