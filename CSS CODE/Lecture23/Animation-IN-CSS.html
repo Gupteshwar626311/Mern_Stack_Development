@@ -16,7 +16,7 @@
         background-color: beige;
         border: 2px solid black;
       }
-      .box {
+      .box1 {
         width: 350px;
         height: 80px;
         background-color: blue;
@@ -24,12 +24,24 @@
         border-radius: 10px;
         margin: 10px;
         position: relative;
-        animation-name: rightMovement;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* animation-name: rightMovement;
         animation-duration: 5s;
-        animation-iteration-count: infinite;
+        animation-iteration-count: 1; */
         /* animation-delay: 2s; */
-        animation-timing-function: linear;
+        /* animation-timing-function: linear; */
+        /* animation-direction: alternate;
+        animation-direction: reverse;
+        animation-direction: alternate-reverse; */
+        /* animation-fill-mode: backwards;
+        animation-fill-mode: both; */
         /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+        /* @keyframes duration | easing-function | delay |
+        iteration-count | direction | fill-mode | play-state | name */
+        animation: 3s linear 1s infinite alternate none running rightMovement;
       }
 
       @keyframes rightMovement {
@@ -40,14 +52,99 @@
 
         to {
           top: 0;
-          left: 850px;
+          left: 980px;
+        }
+      }
+
+      /* Box Two Animation */
+      #box2 {
+        width: 350px;
+        height: 80px;
+        background-color: blue;
+        border: 3px solid yellow;
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: 5s ease-in 1s infinite alternate none running leftMovement;
+      }
+
+      /* KeyFrame Animation */
+
+      @keyframes leftMovement {
+        from {
+          top: 650px;
+          left: 1350px;
+        }
+
+        to {
+          top: 650px;
+          left: 0px;
+        }
+      }
+
+      /* Circle */
+      #circle {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border: 3px solid yellow;
+        border-radius: 50px;
+        margin: 10px;
+        position: relative;
+        top: 30%;
+        left: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: 10s ease-in-out 0s infinite alternate-reverse none running
+          circleMovement;
+      }
+
+      /* Circle Movement */
+
+      @keyframes circleMovement {
+        /* from {
+          top: 650px;
+          left: 1350px;
+        }
+
+        to {
+          top: 650px;
+          left: 0px;
+        } */
+        0% {
+          top: 1%;
+          left: 5%;
+        }
+        30% {
+          top: 5%;
+          left: 90%;
+        }
+        60% {
+          top: 70%;
+          left: 10%;
+        }
+        100% {
+          top: 75%;
+          left: 90%;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="box"></div>
+      <div class="box1">
+        <h1>Hello Gupteshwar</h1>
+      </div>
+      <div id="circle">
+        <h2>circle</h2>
+      </div>
+      <div id="box2">
+        <p>Welcome To Box animation Element</p>
+      </div>
     </div>
   </body>
 </html>
